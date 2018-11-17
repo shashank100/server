@@ -1,0 +1,8 @@
+{
+  "DEV": {
+    "resource_url" : "http://localhost:7000"
+  },
+  "PROD": {
+    "resource_url": ""
+  }
+}

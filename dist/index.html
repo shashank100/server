@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eggsential</title>
+  </head>
+</html>
+  <body>
+<script>
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+    <div id="mount-point"></div>
+  <script type="text/javascript" src="/vendor.1.0.0.bundle.js"></script><script type="text/javascript" src="/bundle.2.2.0.js"></script></body>
+  <script type="text/javascript">
+    window.onload = function() {
+      document
+        .querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor
+            .addEventListener("click", function (e) {
+              e.preventDefault();
+
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"
+            });
+          });
+        });
+
+    document
+      .getElementById('hamburger')
+      .addEventListener('click', function() {
+        var node = document.getElementById("navItem");
+        if (node.className === "nav-items") {
+          node.classList.add("hidden");
+        } else {
+          node.classList.remove("hidden");
+        }
+      });
+
+      document
+        .querySelectorAll('#nav-ul > li')
+        .forEach(function(child) {
+          child
+            .addEventListener('click', function() {
+              document.getElementById('navItem').classList.add("hidden");
+            });
+        });
+    }
+  </script>
+</html>
